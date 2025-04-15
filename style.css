@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Cairo', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #74ebd5, #9face6);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  padding: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  animation: fadeIn 0.7s ease-in-out;
+  transition: all 0.3s ease;
+}
+
+.lang-toggle {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.lang-toggle button {
+  background: transparent;
+  border: 1px solid #aaa;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.lang-toggle button:hover {
+  background-color: #f0f0f0;
+}
+
+.card h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.subtext {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+input[type="date"] {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+button#calcBtn {
+  background-color: #6a11cb;
+  background-image: linear-gradient(315deg, #6a11cb 0%, #2575fc 74%);
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+button#calcBtn:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+.result-box {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+  background: #f1f1f1;
+  padding: 15px;
+  border-radius: 10px;
+  animation: slideIn 0.4s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
